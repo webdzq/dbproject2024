@@ -1,0 +1,23 @@
+stages:
+  - build
+
+before_script:
+  - before_ci_script
+
+docker-build:
+  stage: build
+  script:
+    - docker_build_fe_script
+  after_script:
+    - after_ci_fe_script
+  tags:
+    - global-runner
+
+  only:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /^ci/
+      - $CI_COMMIT_REF_NAME == "iot-test"
+      - $CI_COMMIT_REF_NAME == "master"
+      - $CI_COMMIT_REF_NAME == "dev"
+      - $CI_PIPELINE_SOURCE == "web"
+      - $CI_PIPELINE_SOURCE == "api"

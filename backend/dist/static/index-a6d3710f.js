@@ -1,0 +1,1 @@
+import{r as a}from"./index-5f2b1643.js";const t=t=>a.get({url:"/api/game/getList",params:t}),e=t=>a.post({url:"/api/game/add",data:t}),s=t=>a.post({url:"/api/game/update",data:t}),p=t=>a.post({url:"/api/game/delete",data:t});export{e as a,p as d,t as g,s as u};

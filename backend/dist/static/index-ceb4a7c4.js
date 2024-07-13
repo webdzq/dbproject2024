@@ -1,0 +1,1 @@
+import{r as a}from"./index-5f2b1643.js";const s=s=>a.get({url:"/api/season/getList",params:s}),t=s=>a.post({url:"/api/season/add",data:s}),e=s=>a.post({url:"/api/season/update",data:s}),p=s=>a.post({url:"/api/season/delete",data:s}),o=()=>a.get({url:"/api/player/kv"});export{o as a,t as b,p as d,s as g,e as u};
